@@ -46,3 +46,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 PACKAGE_PATH=/opt/sri
+
+alias sync-be="rsync -avz --stats nvitovitch@kestrel:'/tmp/be*' /media/sf_hostshare"
+alias sync-harris="rsync -avg --stats nvitovitch@kestrel:~/local/Harris /media/sf_hostshare"
