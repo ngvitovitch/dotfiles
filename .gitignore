@@ -1,3 +1,4 @@
 *.key
 *.pub
 *.pem
+home/.ssh/known_hosts
