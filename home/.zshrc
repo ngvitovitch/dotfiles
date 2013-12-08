@@ -45,3 +45,8 @@ plugins=(git sri)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+# Amazon Web Services
+if [ -f ~/.awsrc ]; then
+.	~/.awsrc
+fi
