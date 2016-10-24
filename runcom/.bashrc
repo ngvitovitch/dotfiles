@@ -11,7 +11,7 @@ go_flags="-g -Wall -include ~/pkg/include/allheads.h -O3"
 alias go_c="c99 -xc - $go_libs $go_flags"
 
 # ssh
-find ~/.ssh/keys | egrep '\.(key$)|(pem$)' | xargs ssh-add 2> /dev/null
+#find ~/.ssh/keys | egrep '\.(key$)|(pem$)' | xargs ssh-add 2> /dev/null
 
 # once
 #if ! ps aux | grep -v grep | grep tmux >> /dev/null; then

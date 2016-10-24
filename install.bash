@@ -16,5 +16,7 @@ ln -sfv "$DOTFILES_DIR/runcom/.vimrc" ~
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 mkdir -p ~/.ssh && ln -sfv "$DOTFILES_DIR/ssh/config" ~/.ssh
 
-# Package managers & packages
-# ...
+# Platform-specific configurations
+DISTRO="$(awk -F= '{ if ($1 == "NAME") { gsub(/"/,"",$2); print $2;} }' /etc/os-release)"
+[ "$DISTRO" == "Ubuntu" ] && $DOTFILES_DIR/ubuntu/install.bash
+
