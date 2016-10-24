@@ -11,7 +11,6 @@ set history=10000
 " indentation preferences
 set tabstop=2
 set shiftwidth=2
-set autoindent
 " make searches case-sensitive only if they contain upper-case characters
 set ignorecase smartcase
 " highlight current line
