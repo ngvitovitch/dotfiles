@@ -8,7 +8,10 @@ sudo apt-get upgrade -y
 sudo apt-get install -y tmux tree
 
 # C/C++ development essentials
-sudo apt-get install -y build-essentials g++
+sudo apt-get install -y build-essential g++
+
+# Common utilities
+sudo apt-get install -y p7zip-full
 
 # Miscellany
-sudo apt-get install -y cowsay fortune-mod lolcat sl
+sudo apt-get install -y cowsay fortune-mod lolcat sl bash-completion
