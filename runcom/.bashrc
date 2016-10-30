@@ -19,6 +19,11 @@ alias go_c="c99 -xc - $go_libs $go_flags"
 #  PATH=~/pkg/bin:$PATH
 #fi
 
+# local bins
+[ -d ~/local/bin ] && export PATH=~/local/bin:$PATH
+[ -d ~/local/lib ] && export LD_LIBRARY_PATH=~/local/lib:$LD_LIBRARY_PATH
+[ -d ~/Android/Sdk/platform-tools ] && export PATH=~/Android/Sdk/platform-tools:$PATH
+
 # git
 if [ -f /etc/bash_completion ]; then
 . /etc/bash_completion

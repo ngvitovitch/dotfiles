@@ -18,8 +18,7 @@ set cursorline
 " line numbering
 set nu
 " mark column 80
-set textwidth=80
-set colorcolumn=-2
+set colorcolumn=80
 highlight ColorColumn ctermbg=green guibg=orange
 " draw all whitespace (we like knowing exactly what chars are used)
 set list
