@@ -1,5 +1,8 @@
 # .bashrc
 
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
 # alias
 alias thanks="exit"
 alias l="ls -la"
