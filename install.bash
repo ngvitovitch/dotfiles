@@ -11,12 +11,18 @@ EXTRA_DIR="$HOME/.extra"
 [ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
 
 # Bunch of symlinks
+
 ln -sfv "$DOTFILES_DIR/runcom/.bashrc" ~
+ln -sfv "$DOTFILES_DIR/runcom/.bashrc.d" ~
 ln -sfv "$DOTFILES_DIR/runcom/.vimrc" ~
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 mkdir -p ~/.ssh && ln -sfv "$DOTFILES_DIR/ssh/config" ~/.ssh
 
+# Apply permissions
+
+chmod 600 ~/.ssh/config
+
 # Platform-specific configurations
+
 DISTRO="$(awk -F= '{ if ($1 == "NAME") { gsub(/"/,"",$2); print $2;} }' /etc/os-release)"
 [ "$DISTRO" == "Ubuntu" ] && $DOTFILES_DIR/ubuntu/install.bash
-
