@@ -53,3 +53,11 @@ Host apiary-git
   Port 22
   User git
   IdentityFile ~/.ssh/keys/apiary-web.pem
+
+#
+# NYU
+#
+
+Host cims
+  HostName access.cims.nyu.edu
+  User ngv220
