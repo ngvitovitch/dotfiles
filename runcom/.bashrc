@@ -23,6 +23,7 @@ alias go_c="c99 -xc - $go_libs $go_flags"
 #fi
 
 # local bins
+[ -d ~/bin ] && export PATH=~/bin:$PATH
 [ -d ~/local/bin ] && export PATH=~/local/bin:$PATH
 [ -d ~/local/lib ] && export LD_LIBRARY_PATH=~/local/lib:$LD_LIBRARY_PATH
 [ -d ~/Android/Sdk/platform-tools ] && export PATH=~/Android/Sdk/platform-tools:$PATH
