@@ -57,7 +57,21 @@ Host apiary-git
 #
 # NYU
 #
+# For a full list of CIMS servers and other resources,
+# consult <http://tinyurl.com/jnkynmf>.
+#
+# mauler: 4c/8GB
+# brawler: 4c/8GB
+# energon[1..4]: 8c/8GB
+# courses[2,3]: 8c/15GB
+# crunchy[1,5,6]: 64c/256GB
+# crunchy[3,4]: 32c/128GB
+# crackle[1..5]: 16c/16GB
+# snappy[1..5]: 20c/128GB
+#
 
 Host cims
   HostName access.cims.nyu.edu
   User ngv220
+  ForwardAgent yes
+  ForwardX11 yes
