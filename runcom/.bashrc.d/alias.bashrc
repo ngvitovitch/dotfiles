@@ -4,6 +4,9 @@ alias _="sudo"
 alias g="git"
 alias v="vim"
 
+# Overrides
+alias tmux="tmux -2"
+
 # List declared aliases, functions
 
 alias listaliases="alias | sed 's/=.*//'"
