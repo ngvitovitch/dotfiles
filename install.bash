@@ -16,6 +16,7 @@ ln -sfv "$DOTFILES_DIR/runcom/.bashrc" ~
 ln -sfv "$DOTFILES_DIR/runcom/.bashrc.d" ~
 ln -sfv "$DOTFILES_DIR/runcom/.vimrc" ~
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
+ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 mkdir -p ~/.ssh && ln -sfv "$DOTFILES_DIR/ssh/config" ~/.ssh
 
 # Apply permissions
