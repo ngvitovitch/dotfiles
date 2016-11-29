@@ -20,7 +20,7 @@ sudo apt-get install -qq tmux tree
 sudo apt-get install -qq build-essential g++
 
 # Common utilities
-sudo apt-get install -qq p7zip-full
+sudo apt-get install -qq p7zip-full curl
 
 # Miscellany
 sudo apt-get install -qq cowsay fortune-mod lolcat sl bash-completion
