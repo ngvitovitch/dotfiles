@@ -25,5 +25,7 @@ chmod 600 ~/.ssh/config
 
 # Platform-specific configurations
 
-DISTRO="$(awk -F= '{ if ($1 == "NAME") { gsub(/"/,"",$2); print $2;} }' /etc/os-release)"
-[ "$DISTRO" == "Ubuntu" ] && $DOTFILES_DIR/ubuntu/install.bash
+# Perform initial detect-release to decide how to proceed ...
+. ~/.bashrc.d/detect-release.bashrc
+
+[ "$DIST" == "Ubuntu" ] && $DOTFILES_DIR/ubuntu/install.bash
