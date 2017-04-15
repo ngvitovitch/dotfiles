@@ -69,9 +69,61 @@ Host apiary-git
 # crackle[1..5]: 16c/16GB
 # snappy[1..5]: 20c/128GB
 #
+Host cimstunnel
+  HostName access.cims.nyu.edu
+  User ngv220
+  ForwardAgent yes
+  ForwardX11 yes
+  LocalForward 9998 crunchy6.cs.nyu.edu:22
+
+Host crunchy6-jupyter
+  HostName localhost
+  Port 9998
+  LocalForward 9999 localhost:8888
 
 Host cims
   HostName access.cims.nyu.edu
   User ngv220
   ForwardAgent yes
   ForwardX11 yes
+
+Host hpctunnel
+  HostName hpc.nyu.edu
+  ForwardX11 yes
+  LocalForward 8023 mercer.es.its.nyu.edu:22
+  LocalForward 8024 mercer1.es.its.nyu.edu:22
+  LocalForward 8025 dumbo.es.its.nyu.edu:22
+  LocalForward 8026 prince0.hpc.nyu.edu:22
+  LocalForward 8027 prince1.hpc.nyu.edu:22
+  User ngv220
+
+Host mercer
+  HostName localhost
+  Port 8023
+  ForwardX11 yes
+  User ngv220
+
+Host mercer1
+  HostName localhost
+  Port 8024
+  ForwardX11 yes
+  User ngv220
+
+Host dumbo
+  HostName localhost
+  HostKeyAlias dumbo
+  Port 8025
+  ForwardX11 yes
+  User ngv220
+
+Host prince
+  HostName localhost
+  Port 8026
+  ForwardX11 yes
+  User ngv220
+
+Host prince1
+  HostName localhost
+  Port 8027
+  ForwardX11 yes
+  User ngv220
